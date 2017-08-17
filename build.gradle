@@ -12,6 +12,8 @@ repositories {
 
 dependencies {
     testCompile 'junit:junit:4.12'
+    compile group: 'com.google.collections', name: 'google-collections', version: '1.0-rc2'
+    compile "com.google.guava:guava:16+"
 }
 
 sourceSets {
