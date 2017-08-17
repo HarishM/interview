@@ -64,7 +64,6 @@ public class RabinKarpSearch {
     public static void main(String args[]){
         RabinKarpSearch rks = new RabinKarpSearch();
         System.out.println(rks.patternSearch("TusharRoy".toCharArray(), "sharRoy".toCharArray()));
-        System.out.println(rks.patternSearch("TusharRoy".toCharArray(), "sharRoy".toCharArray()));
         System.out.println(rks.patternSearch("TusharRoy".toCharArray(), "Roy".toCharArray()));
         System.out.println(rks.patternSearch("TusharRoy".toCharArray(), "shas".toCharArray()));
         System.out.println(rks.patternSearch("TusharRoy".toCharArray(), "usha".toCharArray()));
