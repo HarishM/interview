@@ -14,16 +14,29 @@ import java.util.Map;
  */
 public class Trie {
 
-    private class TrieNode {
+    public static class TrieNode {
         Map<Character, TrieNode> children;
         boolean endOfWord;
+        String word;
         public TrieNode() {
             children = new HashMap<>();
             endOfWord = false;
+            word = null;
+        }
+        
+        public Map<Character, TrieNode> getChildren(){
+        	return children;
+        }
+        
+        public String getWord(){
+        	return word;
+        }
+        public boolean isEndOfWord(){
+        	return endOfWord;
         }
     }
 
-    private final TrieNode root;
+    public final TrieNode root;
     public Trie() {
         root = new TrieNode();
     }
@@ -43,6 +56,7 @@ public class Trie {
             current = node;
         }
         //mark the current nodes endOfWord as true
+        current.word = word;
         current.endOfWord = true;
     }
 
@@ -58,6 +72,7 @@ public class Trie {
         if (index == word.length()) {
             //if end of word is reached then mark endOfWord as true on current node
             current.endOfWord = true;
+            current.word = word;
             return;
         }
         char ch = word.charAt(index);
